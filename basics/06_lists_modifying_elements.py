@@ -67,32 +67,54 @@ print(f"A {not_fruit} is not a fruit, so I removed it from the list.")
 names = ["abubakr", "omar", "othman", "ali"]
 
 # Initial invitations
-for guest in names:
-    print(f"Hello {guest.title()}! I would like to invite you to dinner.")
+print(f"Hello {names[0].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[1].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[2].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[3].title()}! I would like to invite You to Dinner")
 
-# Replacement for absent guest
-absent = names.pop(2).title()  # othman can't make it
-print(f"{absent} can't make it to dinner.")
-
-names.insert(2, "mohamed")  # replacement
-print(f"The replacement of Othman is {names[2]}.")
+# Othman can't make the dinner
+absent = names.pop(2).title()
+print(f"{absent} can't make it to dinner")
+names.insert(2, "mohamed")
+print(f"The replacement of Othman is {names[2]}")
 
 # Updated invitations
-for guest in names:
-    print(f"Hello {guest.title()}! I would like to invite you to dinner.")
+print(f"Hello {names[0].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[1].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[2].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[3].title()}! I would like to invite You to Dinner")
 
-# Adding more guests
+# More guests to add
 names.insert(0, "khabab")
 names.insert(2, "zaid")
-names.append("abu obaida")  # simpler than using exact index
+names.insert(6, "abu obaida")
 
 # Invitations to all guests
-print("\nUpdated invitations to all guests:")
-for guest in names:
-    print(f"Hello {guest.title()}! I would like to invite you to dinner.")
+print(f"Hello {names[0].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[1].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[2].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[3].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[4].title()}! I would like to invite You to Dinner")
+print(f"Hello {names[5].title()}! I would like to invite You to Dinner")  
+print(f"Hello {names[6].title()}! I would like to invite You to Dinner")
+
+# Shrinking guest list
+print(f"\nI only can invite two people")
+name1 = names.pop(6)
+print(f"Sorry {name1.title()}! I Can't Invite you to dinner, I only have space for two people")
+name2 = names.pop(5)
+print(f"Sorry {name2.title()}! I Can't Invite you to dinner, I only have space for two people")
+name3 = names.pop(4)
+print(f"Sorry {name3.title()}! I Can't Invite you to dinner, I only have space for two people")
+name4 = names.pop(3)
+print(f"Sorry {name4.title()}! I Can't Invite you to dinner, I only have space for two people")
+name5 = names.pop(2)
+print(f"Sorry {name5.title()}! I Can't Invite you to dinner, I only have space for two people")
+
+del names[0:]
+print(names)
 
 # -------------------------
 # 6️⃣ Summary
 # -------------------------
 print("\n✅ All list exercises completed successfully!")
-
