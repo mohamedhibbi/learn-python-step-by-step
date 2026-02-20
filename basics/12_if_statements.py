@@ -282,7 +282,91 @@ if "cherry" in favorite_fruits:
     print("You Really like cherry!")
 
 # -------------------------
-# 1️⃣3️⃣ Summary - Quick Reference
+# 1️⃣3️⃣ Checking for Special Items
+# -------------------------
+# Handle one item in the list differently than others
+
+requested_toppings = ["mushrooms", "green peppers", "extra cheese"]
+for requested_topping in requested_toppings:
+    if requested_topping == "green peppers":
+        print("Sorry, We are out of green peppers")
+    else:
+        print(f"Adding {requested_topping} to the toppings")
+print("\nFinished making your pizza!")
+
+# -------------------------
+# 1️⃣4️⃣ Checking That a List Is Not Empty
+# -------------------------
+# Empty lists evaluate to False in Python
+
+requested_toppings = []
+if requested_toppings:  # Empty list = False, so this is skipped
+    for requested_topping in requested_toppings:
+        print(f"Adding {requested_topping} to toppings")
+    print("\nFinished Making your Pizza!")
+else:
+    print("Are You Sure You want a plain pizza?")
+
+# -------------------------
+# 1️⃣5️⃣ Using Multiple Lists
+# -------------------------
+# Check requested items against available items
+
+available_toppings = ["mushrooms", "olives", "green peppers", "pepperoni", "extra cheese"]
+requested_toppings = ["mushrooms", "french fries", "extra cheese"]
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print(f"Adding {requested_topping}")
+    else:
+        print(f"Sorry, {requested_topping} is not available")
+print("Finished Making Your Pizza! Have A nice Day")
+
+# -------------------------
+# 1️⃣6️⃣ Try It Yourself - Final Exercises
+# -------------------------
+
+# Exercise 1: Hello Admin
+usernames = ["admin", "mohamed", "sara", "hanae", "max", "mimi"]
+for username in usernames:
+    if username == "admin":
+        print("Hello admin, would you like to see a status report?")
+    else:
+        print(f"Hello {username}, Thank you for logging in again.")
+
+# Exercise 2: No Users
+users = []
+if users:
+    for user in users:
+        print(f"Users found: {user}")
+else:
+    print("No users found")
+
+# Exercise 3: Checking Usernames
+current_users = ["noah", "adam", "youssef", "saleh", "youness"]
+new_users = ["mohamed", "mossa", "issa", "saleh", "noah"]
+
+for new_user in new_users:
+    if new_user in current_users:
+        print(f"This user: {new_user.title()} needs to enter new username")
+    else:
+        print(f"This username {new_user.title()} is Available!")
+
+# Exercise 4: Ordinal Numbers
+numbers = list(range(1, 10))
+for number in numbers:
+    if number == 1:
+        value = "st"
+    elif number == 2:
+        value = "nd"
+    elif number == 3:
+        value = "rd"
+    else:
+        value = "th"
+    print(f"{number}{value}")
+
+# -------------------------
+# 1️⃣7️⃣ Summary - Quick Reference
 # -------------------------
 # | Statement Type    | When to Use                              |
 # |-------------------|------------------------------------------|
@@ -296,5 +380,6 @@ if "cherry" in favorite_fruits:
 # | ==                | Equal to                                 |
 # | !=                | Not equal to                             |
 # | <, >, <=, >=      | Less than, greater than, etc.            |
+# | if list:          | Check if list is not empty               |
 
 print("\n✅ All if statement exercises completed successfully!")
